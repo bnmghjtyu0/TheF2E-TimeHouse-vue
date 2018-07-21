@@ -1,0 +1,37 @@
+$starColor: #ccc;
+$starHoverColor: gold;
+$starBorder: 1px;
+
+ul.star {
+  text-align: left;
+  direction: rtl;
+  li {
+    list-style: none;
+    display: inline-block;
+    i {
+      &:before {
+        color: #fff;
+        -webkit-text-stroke: $starBorder $starColor;
+        -webkit-text-fill-color: #fff;
+      }
+    }
+  }
+  li:hover {
+    i {
+      &:before {
+        color: #fff;
+        -webkit-text-stroke: $starBorder $starHoverColor;
+        -webkit-text-fill-color: $starHoverColor;
+      }
+    }
+  }
+  li:hover ~ li {
+    i {
+      &:before {
+        color: #fff;
+        -webkit-text-stroke: $starBorder $starHoverColor;
+        -webkit-text-fill-color: $starHoverColor;
+      }
+    }
+  }
+}
